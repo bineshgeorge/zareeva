@@ -95,19 +95,19 @@
           <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="300">
             <div class="hero-visual">
               <div class="hero-image-wrapper">
-                <img src="assets/img/illustration/illustration-15.webp" class="img-fluid hero-image" alt="Hero Image">
+                <img src="assets/img/about/deneb_digital_identity.png" class="img-fluid hero-image" alt="Deneb Track Digital Identity">
                 <div class="floating-elements">
                   <div class="floating-card card-1">
-                    <i class="bi bi-lightbulb"></i>
-                    <span>Innovation</span>
+                    <i class="bi bi-qr-code"></i>
+                    <span>Product Identity</span>
                   </div>
                   <div class="floating-card card-2">
-                    <i class="bi bi-award"></i>
-                    <span>Excellence</span>
+                    <i class="bi bi-signpost"></i>
+                    <span>Traceability</span>
                   </div>
                   <div class="floating-card card-3">
-                    <i class="bi bi-people"></i>
-                    <span>Collaboration</span>
+                    <i class="bi bi-activity"></i>
+                    <span>Lifecycle Events</span>
                   </div>
                 </div>
               </div>
@@ -974,8 +974,13 @@ If you're exploring serialization, authentication, or supply chain traceability,
             <div class="contact-form card" data-aos="fade-up" data-aos-delay="300">
               <div class="card-body p-4 p-lg-5">
 
-                <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="600">
+                <form id="contactForm"  class="php-email-form" data-aos="fade-up" data-aos-delay="600">
                   <div class="row gy-4">
+
+                     <!-- Feedback Messages -->
+                  <div id="success-msg" class="alert alert-success d-none">Your message has been sent. Thank you!</div>
+                  <div id="error-msg" class="alert alert-danger d-none"> There was an issue sending your message. Please try again later.</div>
+
 
                     <div class="col-12">
                       <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
@@ -994,10 +999,6 @@ If you're exploring serialization, authentication, or supply chain traceability,
                     </div>
 
                     <div class="col-12 text-center">
-                      <div class="loading">Loading</div>
-                      <div class="error-message"></div>
-                      <div class="sent-message">Your message has been sent. Thank you!</div>
-
                       <button type="submit" class="btn btn-submit w-100">Submit Message</button>
                     </div>
 
