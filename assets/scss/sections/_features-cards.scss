@@ -1,0 +1,166 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Features Cards Section
+--------------------------------------------------------------*/
+.features-cards {
+
+  .feature-card,
+  .compliance-card {
+    background-color: var(--surface-color);
+    border-radius: 10px;
+    padding: 30px;
+    height: 100%;
+    transition: all 0.3s ease;
+    position: relative;
+    border: 1px solid transparent;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      border: 1px solid var(--accent-color);
+    }
+  }
+
+  .feature-card {
+    .icon-box {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
+      margin-bottom: 20px;
+
+      i {
+        font-size: 28px;
+        color: var(--accent-color);
+      }
+    }
+
+    h3 {
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    p {
+      color: color-mix(in srgb, var(--default-color), transparent 20%);
+      margin-bottom: 20px;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .feature-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 20px 0;
+
+      li {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 10px;
+        font-size: 15px;
+
+        i {
+          color: var(--accent-color);
+          margin-right: 10px;
+          font-size: 18px;
+          flex-shrink: 0;
+        }
+      }
+    }
+
+    .read-more {
+      display: inline-flex;
+      align-items: center;
+      color: var(--accent-color);
+      font-weight: 500;
+      font-size: 15px;
+      transition: all 0.3s ease;
+
+      i {
+        margin-left: 5px;
+        transition: transform 0.3s ease;
+      }
+
+      &:hover {
+        color: color-mix(in srgb, var(--accent-color), transparent 25%);
+
+        i {
+          transform: translateX(5px);
+        }
+      }
+    }
+  }
+
+  .compliance-card {
+    text-align: center;
+    padding: 25px 20px;
+
+    h4 {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    .status {
+      display: inline-block;
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 500;
+
+      &.in-progress {
+        background-color: rgba(13, 110, 253, 0.1);
+        color: #0d6efd;
+      }
+
+      &.compliant {
+        background-color: rgba(25, 135, 84, 0.1);
+        color: #198754;
+      }
+
+      &.planned {
+        background-color: rgba(108, 117, 125, 0.1);
+        color: #6c757d;
+      }
+    }
+  }
+
+  // Responsive styles
+  @media (max-width: 992px) {
+    .feature-card {
+      margin-bottom: 20px;
+    }
+
+    .compliance-card {
+      margin-bottom: 20px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .feature-card {
+      .icon-box {
+        width: 50px;
+        height: 50px;
+
+        i {
+          font-size: 24px;
+        }
+      }
+
+      h3 {
+        font-size: 20px;
+      }
+    }
+
+    .compliance-card {
+      h4 {
+        font-size: 16px;
+      }
+    }
+  }
+}
